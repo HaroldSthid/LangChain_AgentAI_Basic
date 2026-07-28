@@ -1,16 +1,19 @@
 # RAGAgentic
 
-Notebook educativo en español para recorrer un flujo RAG + LangGraph en Colab o Jupyter local.
+Notebook educativo en español para recorrer un flujo RAG + LangGraph en Colab o Jupyter local, usando OpenRouter como proveedor principal.
 
 ## Quick path
 
 1. Open `Script_LangGraph_para_Colab_y_Diagrama.ipynb`.
-2. Run the setup cells from top to bottom.
-3. Set your API keys when the notebook asks for them.
+2. Run the install cell.
+3. Set the required OpenRouter key and any optional keys.
+4. Build or reload the vector store.
+5. Run the graph and the minimal tests.
+6. Enable Gradio only if you want the UI.
 
 ## What it covers
 
-- Instalación de dependencias para Colab.
+- Instalación de dependencias para Colab o Jupyter local.
 - Carga de una base RAG con Chroma + embeddings de Hugging Face.
 - Grafo LangGraph con `StateGraph`, `START` y `END`.
 - Ruta opcional de búsqueda web con Tavily.
@@ -20,7 +23,7 @@ Notebook educativo en español para recorrer un flujo RAG + LangGraph en Colab o
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb)
 
-Ese enlace asume que el notebook se publicará en `HaroldSthid/LangChain_AgentAI_Basic` dentro de la rama `main`.
+Ese enlace apunta al notebook principal publicado en `HaroldSthid/LangChain_AgentAI_Basic` dentro de la rama `main`.
 
 ## GitHub Pages note
 
@@ -30,4 +33,11 @@ Si publicas este repositorio con GitHub Pages, usa `docs/index.md` como landing 
 
 - Python 3.10+
 - Jupyter Notebook or JupyterLab
-- Optional API keys: `GROQ_API_KEY`, `TAVILY_API_KEY`, `LANGCHAIN_API_KEY`
+- Required API key: `OPENROUTER_API_KEY` (or `OPENROUTER_AGENTICRAG_API_KEY` if you keep the project-specific name)
+- Optional API keys: `TAVILY_API_KEY`, `LANGCHAIN_API_KEY`
+
+## Execution notes
+
+- If the kernel restarts, rerun the vector-store cell first; it reloads persisted Chroma when available and falls back to local documents if needed.
+- Set `DEBUG_RAG_FLOW=1` only when you want diagnostic prints.
+- Keep Gradio optional: the notebook only launches it when the flag is enabled in the Gradio cell.

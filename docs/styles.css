@@ -116,7 +116,9 @@ main { padding: 30px 0 60px; }
 .side-card,
 .info-card,
 .step-card,
-.diag-card {
+.diag-card,
+.placeholder-card,
+.trace-card {
   background: var(--panel);
   border: 1.5px solid var(--line);
   border-top-width: 6px;
@@ -235,7 +237,9 @@ main { padding: 30px 0 60px; }
 
 .info-card,
 .step-card,
-.diag-card {
+.diag-card,
+.placeholder-card,
+.trace-card {
   padding: 20px;
 }
 .info-card p,
@@ -249,6 +253,39 @@ main { padding: 30px 0 60px; }
 .accent-green { border-top-color: var(--green); }
 .accent-orange { border-top-color: var(--orange); }
 .accent-blue { border-top-color: var(--blue); }
+
+.placeholder-card {
+  border-style: dashed;
+  background: #fff8eb;
+}
+.trace-card {
+  background: #fffaf4;
+}
+
+.snippet {
+  margin: 14px 0 0;
+  padding: 14px;
+  border: 1.25px solid rgba(17,17,17,0.16);
+  border-radius: 16px;
+  background: #111;
+  color: #fffaf0;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+.snippet code {
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+code {
+  padding: 2px 6px;
+  border: 1px solid rgba(17,17,17,0.12);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.55);
+}
 
 .pill-row {
   display: flex;

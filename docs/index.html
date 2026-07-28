@@ -21,6 +21,8 @@
           <a href="#ruta">Ruta</a>
           <a href="#script">Script</a>
           <a href="#ejecucion">Ejecución</a>
+          <a href="#demo">Demo en vivo</a>
+          <a href="#trazas">Trace explicado</a>
           <a href="diagnostico.html">Diagnóstico</a>
         </nav>
       </div>
@@ -211,6 +213,84 @@
                 Pensalo como una escalera: cada botón te lleva un paso más arriba. Si algo falla, no reinicies todo;
                 retomá desde la celda que reconstruye la base.
               </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="demo" class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Demo en vivo</span>
+            <h2 class="section-title">El slot estable va en un hosted app, no en un share temporal.</h2>
+          </div>
+          <p>
+            Colab con <code>share=True</code> genera URLs temporales. Para Pages, el camino estable es una app alojada,
+            como Hugging Face Spaces. Hasta que exista, esta sección queda como referencia clara.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="placeholder-card accent-blue">
+            <h3>Placeholder de embed</h3>
+            <p>
+              Reemplazá este bloque cuando tengas el Space publicado en
+              <code>TU_USUARIO/TU_SPACE</code>. No uses links de Colab compartido como destino final.
+            </p>
+            <pre class="snippet"><code>&lt;script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/6.20.0/gradio.js"&gt;&lt;/script&gt;
+&lt;gradio-app space="TU_USUARIO/TU_SPACE"&gt;&lt;/gradio-app&gt;</code></pre>
+          </article>
+          <article class="info-card accent-green">
+            <h3>Qué debe mostrar la demo</h3>
+            <p>
+              Una interfaz simple para probar el flujo RAG. La lógica ya vive en el notebook; el embed solo la presenta
+              de forma estable.
+            </p>
+            <div class="pill-row mt-md">
+              <span class="pill">OpenRouter requerido</span>
+              <span class="pill">Tavily opcional</span>
+              <span class="pill">Sin datos personales</span>
+            </div>
+            <div class="callout mt-md">
+              <strong>Importante:</strong>
+              <p class="mt-sm">
+                Si todavía no existe el Space, dejá esta tarjeta como guía. No inventes una URL de prueba.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="trazas" class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Trace explicado</span>
+            <h2 class="section-title">LangSmith como observabilidad compartible, no como iframe frágil.</h2>
+          </div>
+          <p>
+            La idea es enseñar el trace con links sanitizados, capturas o tarjetas estáticas. El UI autenticado de
+            LangSmith no es el camino estable para Pages.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="trace-card accent-orange">
+            <h3>Formato recomendado</h3>
+            <p>
+              Compartí un link público, recortado y sin datos sensibles. Si hace falta, acompañalo con una captura del
+              trace para que sea fácil de entender.
+            </p>
+            <p class="mt-md"><code>PEGAR_LINK_PUBLICO_LANGSMITH</code></p>
+          </article>
+          <article class="trace-card accent-red">
+            <h3>Qué evitar</h3>
+            <p>
+              No dependas de un iframe a una vista autenticada. Tampoco pegues prompts, respuestas o metadatos con
+              información personal.
+            </p>
+            <div class="callout mt-md">
+              <strong>Regla simple:</strong>
+              <p class="mt-sm">Si no podés compartirlo en público, no lo pongas en Pages.</p>
             </div>
           </article>
         </div>

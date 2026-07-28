@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAGAgentic · Aprendé el flujo, sin miedo</title>
+    <meta
+      name="description"
+      content="Landing pública en español para recorrer el notebook RAG + LangGraph paso a paso, con guía clara, tono beginner-friendly y acceso a Colab."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="#inicio">
+          <span class="brand-badge">RAGAgentic</span>
+          <span>Aprendé con baby steps</span>
+        </a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="#ruta">Ruta</a>
+          <a href="#script">Script</a>
+          <a href="#ejecucion">Ejecución</a>
+          <a href="diagnostico.html">Diagnóstico</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="inicio" class="wrap">
+      <section class="hero" aria-label="Presentación principal">
+        <article class="hero-card">
+          <span class="eyebrow">Guía pública · paso a paso · sin miedo</span>
+          <h1>Aprendé cómo responde un sistema RAG con LangGraph.</h1>
+          <p class="lede">
+            Este sitio ordena el notebook como si contrataras una <strong>súper-asistente personal de investigación</strong>:
+            primero consulta su biblioteca local, después sale a internet si hace falta, y al final te responde en una
+            ventana de chat simple.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="https://colab.research.google.com/github/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Abrir en Colab</a>
+            <a class="btn secondary" href="https://github.com/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Ver notebook</a>
+            <a class="btn secondary" href="https://github.com/HaroldSthid/LangChain_AgentAI_Basic">Ver repo</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>Primero RAG</strong>
+              <span>Busca en tu base local antes de inventar.</span>
+            </div>
+            <div class="stat">
+              <strong>Luego web</strong>
+              <span>Si falta contexto, recién ahí consulta internet.</span>
+            </div>
+            <div class="stat">
+              <strong>Al final Gradio</strong>
+              <span>La ventana de chat para probar todo sin fricción.</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="side-card" aria-label="Mapa rápido de la ruta">
+          <h2>Mapa rápido</h2>
+          <div class="route">
+            <div class="route-item">
+              <div class="route-num">1</div>
+              <div>
+                <strong>Prepará el entorno</strong>
+                <p>Instalá dependencias, cargá claves y no te apures.</p>
+              </div>
+            </div>
+            <div class="route-item">
+              <div class="route-num">2</div>
+              <div>
+                <strong>Corré de arriba hacia abajo</strong>
+                <p>Ejecutás las celdas en orden. El código está ahí, pero la práctica se sigue con play.</p>
+              </div>
+            </div>
+            <div class="route-item">
+              <div class="route-num">3</div>
+              <div>
+                <strong>Verificá el flujo</strong>
+                <p>El grafo decide si consulta la biblioteca, la web o responde directo.</p>
+              </div>
+            </div>
+            <div class="route-item">
+              <div class="route-num">4</div>
+              <div>
+                <strong>Probá la demo</strong>
+                <p>Usá Gradio como chat final y evitá pegar datos personales.</p>
+              </div>
+            </div>
+          </div>
+          <a class="btn primary" href="diagnostico.html">Ir al diagnóstico</a>
+        </aside>
+      </section>
+
+      <section id="ruta" class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">La idea central</span>
+            <h2 class="section-title">No es solo un notebook: es una ruta guiada.</h2>
+          </div>
+          <p>
+            La página está pensada para que cualquier persona pueda entender qué hace cada bloque sin perderse en
+            jerga ni en pasos sueltos.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="info-card accent-red">
+            <h3>Biblioteca primero</h3>
+            <p>
+              El sistema arranca revisando su propia base local/RAG. Esa es la fuente principal: rápida, controlada y
+              más predecible para aprender.
+            </p>
+          </article>
+          <article class="info-card accent-green">
+            <h3>Internet si hace falta</h3>
+            <p>
+              Si la respuesta todavía no está clara, el flujo puede buscar en la web para completar el contexto antes de
+              contestar.
+            </p>
+          </article>
+          <article class="info-card accent-orange">
+            <h3>Decidir con LangGraph</h3>
+            <p>
+              LangGraph es el cerebro y el mapa: revisa el libro, mide si algo sirve, decide si busca afuera y arma el
+              camino final de respuesta.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="script" class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Qué cambió en el script</span>
+            <h2 class="section-title">Un asistente de investigación, no un atajo.</h2>
+          </div>
+          <p>
+            La explicación se escribió para que suene cercana, clara y útil para principiantes: menos magia, más pasos
+            entendibles.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="step-card accent-blue">
+            <h3>OpenRouter reemplazó a Groq</h3>
+            <p>
+              Los modelos de Groq venían más inestables y menos confiables para la parte de evaluación. Para medir si una
+              fuente realmente sirve, OpenRouter con Claude-3-Haiku es una base más sólida y precisa.
+            </p>
+          </article>
+          <article class="step-card accent-red">
+            <h3>La UI final es Gradio</h3>
+            <p>
+              Gradio es la ventana de chat al final del recorrido. No cambia la lógica: solo te permite probarla con una
+              interfaz simple y amigable.
+            </p>
+          </article>
+          <article class="step-card accent-green">
+            <h3>Todo queda más legible</h3>
+            <p>
+              El notebook está pensado para que entiendas el flujo: qué consulta primero, qué valida después y cuándo se
+              activa la búsqueda web.
+            </p>
+          </article>
+          <article class="step-card accent-orange">
+            <h3>Seguro para demo</h3>
+            <p>
+              Sin código extra, sin apuro y sin datos personales. OpenRouter es necesario para que responda el LLM;
+              Tavily es opcional y solo suma búsqueda web.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="ejecucion" class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Cómo usarlo</span>
+            <h2 class="section-title">Clics de arriba hacia abajo. Nada más.</h2>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="diag-card">
+            <h3>Ruta de ejecución</h3>
+            <ol>
+              <li>Abri el notebook en Colab o GitHub.</li>
+              <li>Ejecutá las celdas de arriba hacia abajo.</li>
+              <li>Si falta OpenRouter, revisá instalación, base vectorial y grafo, pero la respuesta con LLM no va a correr.</li>
+              <li>Si falta Tavily, seguí igual: solo se desactiva la búsqueda web opcional.</li>
+              <li>Volvé a correr la celda de la base vectorial si el kernel se reinicia.</li>
+              <li>Terminá en el enlace final de Gradio.</li>
+            </ol>
+          </article>
+          <article class="diag-card">
+            <h3>Reglas simples para no trabarte</h3>
+            <div class="pill-row" aria-label="Consejos rápidos">
+              <span class="pill">No hace falta programar de entrada</span>
+              <span class="pill">OpenRouter responde; Tavily solo suma web</span>
+              <span class="pill">Primero la base RAG</span>
+              <span class="pill">Después web, si conviene</span>
+              <span class="pill">Demo con cuidado y sin info personal</span>
+            </div>
+            <div class="callout mt-md">
+              <strong>Tip:</strong>
+              <p class="mt-sm">
+                Pensalo como una escalera: cada botón te lleva un paso más arriba. Si algo falla, no reinicies todo;
+                retomá desde la celda que reconstruye la base.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Accesos directos</span>
+            <h2 class="section-title">Abrí, probá y seguí.</h2>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <article class="info-card accent-blue">
+            <h3>Notebook en GitHub</h3>
+            <p>Ideal para revisar el archivo y compartir la referencia exacta.</p>
+            <p class="mt-md"><a class="btn secondary" href="https://github.com/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Abrir notebook</a></p>
+          </article>
+          <article class="info-card accent-green">
+            <h3>Colab</h3>
+            <p>La forma más cómoda de ejecutar el flujo completo sin instalar nada localmente.</p>
+            <p class="mt-md"><a class="btn primary" href="https://colab.research.google.com/github/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Abrir en Colab</a></p>
+          </article>
+          <article class="info-card accent-orange">
+            <h3>Repositorio</h3>
+            <p>Si querés ver el proyecto completo, este es el punto de entrada general.</p>
+            <p class="mt-md"><a class="btn secondary" href="https://github.com/HaroldSthid/LangChain_AgentAI_Basic">Ir al repo</a></p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Hecho para aprendizaje público, claro y progresivo. <a href="diagnostico.html">Ver diagnóstico rápido</a>.
+      </footer>
+    </main>
+  </body>
+</html>

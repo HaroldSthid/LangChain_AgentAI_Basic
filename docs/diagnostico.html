@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diagnóstico · RAGAgentic</title>
+    <meta
+      name="description"
+      content="Guía breve para ejecutar el notebook RAG + LangGraph sin trabarse cuando Colab reinicia o falta una clave."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-badge">RAGAgentic</span>
+          <span>Diagnóstico rápido</span>
+        </a>
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#script">Script</a>
+          <a href="index.html#ejecucion">Ejecución</a>
+          <a href="https://colab.research.google.com/github/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Colab</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero hero-single">
+        <article class="hero-card">
+          <span class="eyebrow">Sin drama · sin código extra · paso a paso</span>
+          <h1>Si algo falla, volvé al paso base.</h1>
+          <p class="lede">
+            Esta guía corta te ayuda a destrabar lo típico: kernel reiniciado, claves faltantes o Gradio sin arrancar.
+            La idea es simple: no correr todo de nuevo a ciegas.
+          </p>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="grid-2">
+          <article class="diag-card accent-red">
+            <h2>Orden recomendado</h2>
+            <ol>
+              <li>Instalá dependencias.</li>
+              <li>Configurá OpenRouter.</li>
+              <li>Ejecutá la celda de la base vectorial.</li>
+              <li>Revisá el grafo.</li>
+              <li>Hacé una prueba mínima.</li>
+              <li>Activá Gradio al final.</li>
+            </ol>
+          </article>
+          <article class="diag-card accent-green">
+            <h2>Claves</h2>
+            <ul>
+              <li><strong>Obligatoria:</strong> <code>OPENROUTER_API_KEY</code> o <code>OPENROUTER_AGENTICRAG_API_KEY</code>.</li>
+              <li><strong>Si falta OpenRouter:</strong> podés revisar instalación, documentos, vector store y grafo, pero no generar respuestas con LLM.</li>
+              <li><strong>Opcionales:</strong> <code>TAVILY_API_KEY</code> activa web search; <code>LANGCHAIN_API_KEY</code> activa trazas de LangSmith/observabilidad.</li>
+            </ul>
+          </article>
+          <article class="diag-card accent-orange">
+            <h2>Si el kernel se reinicia</h2>
+            <p>Volvé a correr primero la celda de la base vectorial.</p>
+            <p class="mt-sm">Si <code>vector_store</code> no existe, la celda debería recargar Chroma desde disco o crear un respaldo local.</p>
+          </article>
+          <article class="diag-card accent-blue">
+            <h2>Gradio</h2>
+            <p>La UI es opcional.</p>
+            <p class="mt-sm">Si no aparece, revisá el flag <code>ENABLE_GRADIO</code> dentro de su celda.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="callout">
+          <strong>Recordatorio seguro:</strong>
+          <p class="mt-sm">Usá la demo sin pegar información personal. Si querés probar rápido, seguí la ruta mínima y llegá al link final de Gradio.</p>
+        </div>
+      </section>
+
+      <div class="hero-actions mt-lg">
+        <a class="btn primary" href="index.html">Volver al inicio</a>
+        <a class="btn secondary" href="https://github.com/HaroldSthid/LangChain_AgentAI_Basic/blob/main/Script_LangGraph_para_Colab_y_Diagrama.ipynb">Abrir notebook</a>
+      </div>
+
+      <footer class="footer">
+        ¿Querés seguir? Volvé al <a href="index.html#ruta">mapa de la ruta</a>.
+      </footer>
+    </main>
+  </body>
+</html>

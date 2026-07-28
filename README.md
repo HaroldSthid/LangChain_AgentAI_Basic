@@ -1,6 +1,6 @@
-# RAGAgentic
+# LangChain_AgentAI_Basic · RAGAgentic
 
-Notebook educativo en español para recorrer un flujo RAG + LangGraph en Colab o Jupyter local, usando OpenRouter como proveedor principal.
+Notebook educativo en español para recorrer un flujo RAG + LangGraph en Colab o Jupyter local, usando OpenRouter como proveedor principal. El sitio público y el notebook viven en `HaroldSthid/LangChain_AgentAI_Basic`; esta carpeta local se usa como espacio de preparación.
 
 ## Quick path
 
@@ -27,14 +27,14 @@ Ese enlace apunta al notebook principal publicado en `HaroldSthid/LangChain_Agen
 
 ## GitHub Pages note
 
-Si publicas este repositorio con GitHub Pages, usa `docs/index.md` como landing page. La portada enlaza al notebook en GitHub para evitar rutas rotas cuando Pages se sirve desde `docs/`.
+Si publicas este repositorio con GitHub Pages, usa `docs/index.html` como landing page. La portada enlaza al notebook en GitHub y Colab para evitar rutas rotas cuando Pages se sirve desde `docs/`.
 
 ## Run locally
 
 - Python 3.10+
 - Jupyter Notebook or JupyterLab
 - Required API key: `OPENROUTER_API_KEY` (or `OPENROUTER_AGENTICRAG_API_KEY` if you keep the project-specific name)
-- Optional API keys: `TAVILY_API_KEY`, `LANGCHAIN_API_KEY`
+- Optional API keys: `TAVILY_API_KEY` for web search, `LANGCHAIN_API_KEY` for LangSmith traces/observability
 
 ## Execution notes
 

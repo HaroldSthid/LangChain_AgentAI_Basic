@@ -13,4 +13,4 @@ Esta carpeta ahora tiene la portada visual en `index.html`.
 
 ## Nota
 
-La landing deja preparado el espacio para una demo estable en Hugging Face Spaces y para trazas públicas/sanitizadas de LangSmith. No uses URLs temporales de Colab como embed final.
+La landing usa la demo estable de Hugging Face Spaces `HaroldSthid/LangChainRAGAgenticbyDiplomadoAI` y deja espacio para trazas públicas/sanitizadas de LangSmith. No uses URLs temporales de Colab como embed final.

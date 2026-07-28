@@ -9,6 +9,7 @@
       content="Landing pública en español para recorrer el notebook RAG + LangGraph paso a paso, con guía clara, tono beginner-friendly y acceso a Colab."
     />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/6.20.0/gradio.js"></script>
   </head>
   <body>
     <header class="topbar">
@@ -226,19 +227,23 @@
           </div>
           <p>
             Colab con <code>share=True</code> genera URLs temporales. Para Pages, el camino estable es una app alojada,
-            como Hugging Face Spaces. Hasta que exista, esta sección queda como referencia clara.
+            como Hugging Face Spaces. Este bloque ya apunta al Space público creado para el laboratorio.
           </p>
         </div>
 
         <div class="grid-2">
-          <article class="placeholder-card accent-blue">
-            <h3>Placeholder de embed</h3>
+          <article class="embed-card accent-blue">
+            <h3>Demo embebida</h3>
             <p>
-              Reemplazá este bloque cuando tengas el Space publicado en
-              <code>TU_USUARIO/TU_SPACE</code>. No uses links de Colab compartido como destino final.
+              La demo vive en <code>HaroldSthid/LangChainRAGAgenticbyDiplomadoAI</code>. Si el Space está durmiendo o
+              todavía termina de construirse, abrilo directo desde el botón de respaldo.
             </p>
-            <pre class="snippet"><code>&lt;script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/6.20.0/gradio.js"&gt;&lt;/script&gt;
-&lt;gradio-app space="TU_USUARIO/TU_SPACE"&gt;&lt;/gradio-app&gt;</code></pre>
+            <div class="gradio-frame mt-md">
+              <gradio-app space="HaroldSthid/LangChainRAGAgenticbyDiplomadoAI"></gradio-app>
+            </div>
+            <p class="mt-md">
+              <a class="btn secondary" href="https://huggingface.co/spaces/HaroldSthid/LangChainRAGAgenticbyDiplomadoAI">Abrir Space en HF</a>
+            </p>
           </article>
           <article class="info-card accent-green">
             <h3>Qué debe mostrar la demo</h3>
@@ -254,7 +259,7 @@
             <div class="callout mt-md">
               <strong>Importante:</strong>
               <p class="mt-sm">
-                Si todavía no existe el Space, dejá esta tarjeta como guía. No inventes una URL de prueba.
+                Si el embed tarda, no es un error del notebook: Hugging Face puede estar iniciando el Space.
               </p>
             </div>
           </article>

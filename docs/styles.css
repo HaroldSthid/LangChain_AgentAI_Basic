@@ -118,6 +118,7 @@ main { padding: 30px 0 60px; }
 .step-card,
 .diag-card,
 .placeholder-card,
+.embed-card,
 .trace-card {
   background: var(--panel);
   border: 1.5px solid var(--line);
@@ -239,6 +240,7 @@ main { padding: 30px 0 60px; }
 .step-card,
 .diag-card,
 .placeholder-card,
+.embed-card,
 .trace-card {
   padding: 20px;
 }
@@ -257,6 +259,20 @@ main { padding: 30px 0 60px; }
 .placeholder-card {
   border-style: dashed;
   background: #fff8eb;
+}
+.embed-card {
+  background: #fff8eb;
+}
+.gradio-frame {
+  min-height: 520px;
+  overflow: hidden;
+  border: 1.5px solid rgba(17,17,17,0.22);
+  border-radius: 18px;
+  background: #fffdf7;
+}
+.gradio-frame gradio-app {
+  display: block;
+  min-height: 520px;
 }
 .trace-card {
   background: #fffaf4;

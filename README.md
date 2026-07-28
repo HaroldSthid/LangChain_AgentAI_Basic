@@ -28,8 +28,7 @@ Ese enlace apunta al notebook principal publicado en `HaroldSthid/LangChain_Agen
 ## GitHub Pages note
 
 Si publicas este repositorio con GitHub Pages, usa `docs/index.html` como landing page. La portada enlaza al notebook en GitHub y Colab para evitar rutas rotas cuando Pages se sirve desde `docs/`.
-La demo estable de Gradio debe vivir en un hosted app como Hugging Face Spaces, y las trazas de LangSmith deben compartirse como links públicos sanitizados o capturas, no como un embed autenticado.
-Gradio en Pages usa `TU_USUARIO/TU_SPACE` como placeholder hasta tener el Space real.
+La demo estable de Gradio vive en Hugging Face Spaces: `HaroldSthid/LangChainRAGAgenticbyDiplomadoAI`. Las trazas de LangSmith deben compartirse como links públicos sanitizados o capturas, no como un embed autenticado.
 
 ## Run locally
 
